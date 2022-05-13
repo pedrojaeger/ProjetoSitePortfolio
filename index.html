@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Portfólio Pedro Jaeger</title>
+         <!-- =============== CSS ===============-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+        
+         <!-- =============== SWIPER JS CSS ===============-->
+         <link
+             rel="stylesheet"
+             href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+         />
+
+        <link rel="stylesheet" href="./style.css">
+
+       
+
+    </head>
+
+    <body>
+        
+        <main>
+            <header id="header">
+                <nav>
+                    <div class="container">
+                        <div class="logo">
+                            <img src="./img/logo.png" alt="logo">    
+                        </div>
+
+                        <div class="links">
+                            <ul>
+                                <li>
+                                    <a href="#header">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#tecnologias">Tecnologias</a>
+                                </li>
+                                <li>
+                                    <a href="#portfolio">Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="#sobre">Sobre</a>
+                                </li>
+                                <li>
+                                    <a href="#depoimentos">Indicações</a>
+                                </li>
+                                <li>
+                                    <a href="#contato">Contato</a>
+                                </li>
+                                <li>
+                                    <a href="#feedback" class="candidato">Selecionar Candidato</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="hamburguer-menu">
+                            <div class="bar">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+
+                <div class="header-content">
+                    <div class="container grid-2">
+                        <div class="column-1">
+                            <h1 class="header-nome">Pedro Jaeger</h1>
+                            <p class="texto">
+                                Olá, eu sou o Pedro, o mais brabo que voce ja voce conheceu.
+                                Pode contratar de olho fechado que o pai da conta... os guri são brabo no desenrolo.
+                                Se nos nao sabe, a gente corre atras e aprende. Pode confiar!
+                            </p>
+                            
+                                                                       
+                            <a href="https://www.linkedin.com/in/pedro-jaeger-79b65593/" target="_blank" class="btn">Linkedin</a>
+                            <a href="https://github.com/pedrojaeger" target="_blank" class="btn">GitHub</a>
+                            <a href="https://www.instagram.com/pgjaeger/" target="_blank" class="btn">Instagram</a>
+                        </div>
+                            
+                        
+                        <div class="column-2 imagem">
+                            <img src="./img/2.png" class="img-element z-index" alt="foto">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="tecnologias section" id="tecnologias">
+                <div class="container">
+                    <div class="section-header">
+                        <h3 class="titulo" data-title="Tecnologias que domino">Tecnologias</h3>
+                        <p class="texto">Essas são algumas tecnologias que o pai manja</p>
+                    </div>
+
+                    <div class="cards">
+                        <div class="card-wrap">
+                            <div class="card">
+                                <div class="card-content">
+                                    <img src="./img/html.png" class="icone" alt="HTML5">
+                                    <h3 class="titulo-pequeno">HTML 5</h3>
+                                    <p class="texto">O pai desenrola no html. É o foco dos guri? Não é, mas pra ficar bom fazemos
+                                        qualquer coisa, A gente tem sangue no olho, ce ta ligado né?
+                                    </p>
+                                    <a href="#portfolio" class="btn pequeno">Ver Projetos</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-wrap">
+                            <div class="card">
+                                <div class="card-content">
+                                    <img src="./img/css.png" class="icone" alt="CSS">
+                                    <h3 class="titulo-pequeno">CSS</h3>
+                                    <p class="texto">CSS parece facil, ces tao ligado né? Mas é embaçadinho.
+                                        Esse site fiz pra mostrar que posso não saber tudo, mas descubro!
+                                    </p>
+                                    <a href="#portfolio" class="btn pequeno">Ver Projetos</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-wrap">
+                            <div class="card">
+                                <div class="card-content">
+                                    <img src="./img/angular.png" class="icone" alt="Angular">
+                                    <h3 class="titulo-pequeno">ANGULAR</h3>
+                                    <p class="texto">Galera foca tudo no React né? Mas Angular tem mercado pacas,
+                                        o pai é ligeiro e já foi se especializando na tecnologia, mas se precisar de React,
+                                        partindo do Angular é só um pulinho né
+                                    </p>
+                                    <a href="#portfolio" class="btn pequeno">Ver Projetos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            
+            <section class="portfolio section" id="portfolio">
+                <div class="background-bg">
+                </div>
+                    
+                    
+                <div class="container">
+                        <div class="section-header">
+                            <h3 class="titulo" data-title="Meus projetos">Portfolio</h3>
+                        </div>
+                        
+                        <div class="section-body">
+                            <div class="filtro">
+                                <button class="filtro-btn active" data-filter="*">Todos</button>
+                                <button class="filtro-btn" data-filter=".html">HTML/CSS</button>
+                                <button class="filtro-btn" data-filter=".js">JS</button>
+                                <button class="filtro-btn" data-filter=".angular">Angular</button>
+                            </div>
+
+                            <div class="grid">
+                                <div class="grid-item js">
+                                    <div class="gallery-image">
+                                        <img src="./img/angular.png" alt="">
+                                        <div class="img-overlay">
+                                            <div class="plus"></div>
+                                            <div class="img-description">
+                                                <h3>Titulo</h3>
+                                                <h5>Breve explanação projjeto</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item angular html">
+                                    <div class="gallery-image">
+                                        <img src="./img/css.png" alt="">
+                                        <div class="img-overlay">
+                                            <div class="plus"></div>
+                                            <div class="img-description">
+                                                <h3>Titulo</h3>
+                                                <h5>Breve explanação projjeto</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item js">
+                                    <div class="gallery-image">
+                                        <img src="./img/html.png" alt="">
+                                        <div class="img-overlay">
+                                            <div class="plus"></div>
+                                            <div class="img-description">
+                                                <h3>Titulo</h3>
+                                                <h5>Breve explanação projjeto</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item angular js">
+                                    <div class="gallery-image">
+                                        <img src="./img/foto.jpg" alt="">
+                                        <div class="img-overlay">
+                                            <div class="plus"></div>
+                                            <div class="img-description">
+                                                <h3>Titulo</h3>
+                                                <h5>Breve explanação projjeto</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                             </div>
+                            
+                             <div class="ver-mais">
+                                 <a href="https://github.com/pedrojaeger" target="_blank" class="btn">Ver no Github</a>
+                             </div>
+
+                        </div>
+
+                </div>
+
+            </section>
+
+            <section class="sobre section" id="sobre">
+                <div class="container">
+                    <div class="section-header">
+                        <h3 class="titulo" data-title="Quem eu sou">Sobre Mim</h3>
+                    </div>
+
+                    <div class="section-body grid-2">
+                        <div class="column-1">
+                            <h3 class="titulo-pequeno">Oii, eu sou</h3>
+                            <p class="texto">Aqui vai um textinho explicando minha historia na programaçao,
+                                ou talvez deva colocar algo mais pessoal? SoftSkills talvez?
+                                Vamos lá, é sempre valido né
+                            </p>
+                            <div class="skills">
+                                <div class="skill-html">
+                                    <h3 class="skill-titulo">HTML</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="25%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-js">
+                                    <h3 class="skill-titulo">JS</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="90%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-angular">
+                                    <h3 class="skill-titulo">ANGULAR</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/pedro-jaeger-79b65593/" target="_blank" class="btn">Ver no Linkedin</a>
+                        </div>
+
+                        <div class="column-2 imagem">
+                            <img src="./img/1.png" alt="Fotin">
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="depoimentos section" id="depoimentos">
+                <div class="container">
+                    <div class="section-header">
+                        <h3 class="titulo" data-title="O que falam de mim">Depoimentos</h3>
+                    </div>
+
+                    <div class="depoimentos-content grid-2">
+                        <div class="column-1 reviews">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide review">
+                                        <i class="fas fa-quote-left quote"></i>
+                                        <div class="rate">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="review-texto">
+                                            O Pedro tem se mostrado muito dedicado e estudioso e tals...
+                                        </p>
+
+                                        <div class="review-info">
+                                            <h3 class="review-nome">William Caue</h3>
+                                            <h5 class="review-cargo">Full Stack Developer</h5>
+                                        </div>
+                                        
+                                        
+                                        <div class="review-nav swiper-button-next">
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide review">
+                                        <i class="fas fa-quote-left quote"></i>
+                                        <div class="rate">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="review-texto">
+                                            O Pedro é brabo, pode confiar
+                                        </p>
+
+                                        <div class="review-info">
+                                            <h3 class="review-nome">Alexsandro Corsini</h3>
+                                            <h5 class="review-cargo">Supervisor de Custos</h5>
+                                        </div>
+
+                                        <div class="review-nav swiper-button-next">
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide review">
+                                        <i class="fas fa-quote-left quote"></i>
+                                        <div class="rate">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="review-texto">
+                                            Brabo, só isso que posso dizer
+                                        </p>
+
+                                        <div class="review-info">
+                                            <h3 class="review-nome">Anonimo</h3>
+                                            <h5 class="review-cargo">Diretor</h5>
+                                        </div>
+                                        
+                                        <div class="review-nav swiper-button-next">
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide review">
+                                        <i class="fas fa-quote-left quote"></i>
+                                        <div class="rate">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="review-texto">
+                                            Mestre!!!
+                                        </p>
+
+                                        <div class="review-info">
+                                            <h3 class="review-nome">Jair Messias</h3>
+                                            <h5 class="review-cargo">Supervisor de Custos</h5>
+                                        </div>
+                                        
+                                        <div class="review-nav swiper-button-next">
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        </div>
+                                    </div>
+
+                                    
+                                </div>
+                                
+                                
+
+                            </div>
+                        </div>
+
+                        <div class="column-2 imagem">
+                            <img src="./img/foto.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="contato" id="contato">
+                <div class="container">
+                    <div class="contato-box">
+                        <div class="contato-info">
+                            <h3 class="titulo">Entre em conato</h3>
+                            <p class="texto">Quer falar com o pai? chamaaaaaaa!</p>
+
+                            <div class="info-wrap">
+                                <div class="info">
+                                    <div class="contato-icone">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <p class="info-texto">NH né pai, RS o melhor do Brasil!</p>
+                                </div>
+
+                                <div class="info">
+                                    <div class="contato-icone">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </div>
+                                    <p class="info-texto">Email dos gu</p>
+                                </div>
+
+                                <div class="info">
+                                    <div class="contato-icone">
+                                        <div class="fas fa-phone-alt"></div>
+                                    </div>
+                                    <p class="info-texto">51 982747230</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contato-form">
+                            <h3 class="titulo">Entre em contato</h3>
+                            <div class="row">
+                                <input type="text" class="contato-input" placeholder="Telefone">
+                                <input type="text" class="contato-input" placeholder="Email">
+                            </div>
+                            <div class="row">
+                                <input type="text" class="contato-input" placeholder="Nome">
+                                <input type="email" class="contato-input" placeholder="Empresa">
+                            </div>
+                            <div class="row">
+                                <textarea name="mensagem" class="contato-input textarea" placeholder="Mensagem"></textarea>
+                            </div>
+                            <a href="#" class="btn">Enviar</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contrate" id="feedback">
+                <div class="container">
+                    <h3 class="titulo" data-title="Deixe o seu feeedback">Quero o seu feedback</h3>
+                    <p class="texto">Se voce chegou ate aqui é por que alguma coisa te chamou a atenção.
+                        Se você quiser me contratar é só entrar em contato em um dos links a cima, 
+                        Caso nao queira, mesmo assim quero ter um feedback seu do meu portfolio, skills ou o que posso melhor 
+                        ou até mesmo estudar
+                    </p>
+                    <a href="" class="btn">Me chame no Linkedin</a>
+                </div>
+
+            </section>
+
+            
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="grid-4">
+                    <div class="grid-4-col footer-sobre">
+                        <h3 class="titulo-pequeno">Sobre</h3>
+                        <p class="texto">
+                            Texto aletorio so pra preencher
+                        </p>
+                    </div>
+
+                    <div class="grid-4-col footer-links">
+                        <h3 class="titulo-pequeno">Links</h3>
+                        <ul>
+                            <li>
+                                <a href="#tecnologias">Tecnologias</a>
+                            </li>
+                            <li>
+                                <a href="#portfolio">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#sobre">Sobre mim</a>
+                            </li>
+                            <li>
+                                <a href="#depoimentos">Depoimentos</a>
+                            </li>
+                            <li>
+                                <a href="#contato">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-4-col footer-links">
+                        <h3 class="titulo-pequeno">Tecnologias / Projetos</h3>
+                        <ul>
+                            <li>
+                                <a href="#portfolio">HTML</a>
+                            </li>
+                            <li>
+                                <a href="#portfolio">CSS</a>
+                            </li>
+                            <li>
+                                <a href="#portfolio">JS</a>
+                            </li>
+                            <li>
+                                <a href="#portfolio">ANGULAR</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-4-col footer-contato">
+                        <h3 class="titulo-pequeno">Contato</h3>
+                        <p class="texto">Texto aleatorio</p>
+                        <div class="footer-input-wrap">
+                            <input type="email" class="footer-input" placeholder="email">
+                            <a href="" class="input-arrow">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-footer">
+                    <div class="copyright">
+                        <p class="texto">
+                            Copyright&copy; 2022 todos os direitos reservados | Feito por
+                            <span> Pedro Jaeger</span>
+                        </p>
+                    </div>
+                    <div class="followme-wrap">
+                        <div class="followme">
+                            <h3>Me siga nas redes sociais</h3>
+                            <span class="footer-line"></span>
+                            <div class="social-media">
+                                <a href="">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="back-btn-wrap">
+                            <a href="" class="back-btn">
+                                <i class="fas fa-chevron-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+        </footer>
+        <!-- =============== SWIPER JS JS ===============-->
+
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+        <!-- =============== FIM SWIPER JS JS ===============-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>"></script>
+        <script src="./js/isotope.pkgd.min.js"></script>
+        <script src="./js/app.js">
+            
+
+        
+            
+
+        </script>
+
+
+    </body>
+
+
+
+</html>

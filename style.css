@@ -1,0 +1,1609 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*Vantagens de ter as variaveis é em caso de troca de cor, não precisar mudar em todo o arquivo, alterando só aqui nas variaveis*/
+:root {
+    --dark: #333;
+    --dark2: #7a7a7a;
+    --main-color: #265488;
+   /* --main-color: #784cfb;*/
+    --light: #fff;
+    --light2: #f9fafb;
+    --light3: #f6f7fb;
+}
+
+
+/* ================ Estilos Gerais ================ */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    z-index: 5;
+    max-width: 92rem;
+    padding: 0 4rem;
+    margin: 0 auto;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*aqui defino como vao ser as colunas do display grid, nesse caso sao duas colunas uma de
+    1 fração do espaço disponivel e outra de 1 fração do espaço disponivel, se quisesse mais uma era so add  ... tambem poderia fazer em %*/
+    align-items: center; /*align alinha vertical*/
+    justify-content: center; /*justify alinha horizontal*/
+}
+
+.texto {
+    font-size: 1.25rem;
+    color: var(--dark2);
+    line-height: 1.6;
+
+}
+
+.column-1 {
+    margin-right: 1.5rem;
+}
+
+.column-2 {
+    margin-left: 1.5rem;
+}
+
+.imagem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.z-index {
+    position: relative;
+    z-index: 2;
+}
+
+.section {
+    padding: 7rem 0;
+    overflow: hidden;
+}
+
+.section-header{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.titulo {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.titulo:before {
+    content: attr(data-title);
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--main-color);
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.titulo:after {
+    content: " ";
+    position: absolute; /*absolute posso jogar pra qualquer lado*/
+    width: 100px;
+    height: 5px;
+    border-radius: 3px;
+    background-color:var(--main-color) ;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.section-header .texto {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.titulo-pequeno {
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: var(--main-color);
+    color: var(--light);
+    border-radius: 2rem;
+    line-height: 1;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0.2rem 0.2rem;
+    transition: 0.3s;
+    
+}
+
+.btn:hover {
+    background-color: whitesmoke;
+    color: var(--main-color);
+}
+
+.btn.pequeno {
+    padding: 0.7rem 1.8rem ;
+    font-size: 1rem;
+     
+}
+
+
+/* ================ HEADER  ================ */
+
+header {
+    width: 100%;
+    background-color: var(--light3);
+    overflow: hidden;
+}
+
+nav {
+    width: 100%;
+    position: relative;
+    z-index: 50;
+
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between; /*deixa um de cada lado da tela, no caso logo a esquerda e nav a direita*/
+    height: 6rem;
+    align-items: center;
+    
+}
+
+.logo {
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.links ul {
+    display: flex; /*flex sempre alinha tudo horizontal*/
+}
+
+.links a {
+    display: inline-block;
+    padding: 0.9rem 1.2rem; 
+    color: var(--dark);
+    font-size: 1.05rem;
+    text-transform: uppercase; /*deixa tudo maiusculo*/
+    font-weight: 500;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.links a.candidato {
+    background-color: var(--main-color);
+    color: var(--light);
+    border-radius: 2rem;
+    font-size: 1rem;
+    padding: 0.9rem 2.1rem;
+    margin-left: 1rem;
+}
+
+.links a:hover {
+    color: var(--main-color);
+    
+}
+
+.links a.candidato:hover {
+    color: var(--main-color);
+    background-color: whitesmoke ;
+}
+
+.hamburguer-menu {
+    width: 2.7rem;
+    height: 3rem;
+    z-index: 100;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hamburguer-menu .bar {
+    position: relative;
+    width: 2.1rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--dark);
+    transition: 0.5s;
+}
+
+.bar:before,
+.bar:after {
+    content: "";
+    position: absolute;
+    width: 2.1rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--dark);
+    transition: 0.5s;
+}
+
+.bar:before {
+    transform: translateY(-9px);
+}
+
+.bar:after {
+    transform: translateY(9px);
+}
+
+nav.open .hamburguer-menu .bar {
+    background-color: transparent;
+    transform: rotate(360deg);
+}
+
+nav.open .hamburguer-menu .bar:before {
+    transform: translateY(0) rotate(45deg);
+    background-color: var(--light);
+}
+
+nav.open .hamburguer-menu .bar:after {
+    transform: translateY(0) rotate(-45deg);
+    background-color: var(--light);
+
+}
+
+nav.open .links {
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+.header-content .container.grid-2 {
+    grid-template-columns: 2.5fr 3.5fr; /*eu tenho as definições do grid-template la no geral, mas informando aqui ele sobrepoe*/
+    min-height: calc(100vh - 6rem); /*100 vh é a visao da tela 100% menos os 6rem que é do nav*/
+    padding-bottom: 2.5rem;
+    text-align: left;
+}
+
+
+
+
+
+.header-nome {
+    font-size: 3.8rem;
+    line-height: 0.8;
+    color: var(--dark);
+}
+
+.header-content .texto {
+    margin: 2.15rem 0; /*primeiro top e bottom e depois left e right*/
+}
+
+
+
+
+.header-content .imagem .img-content {
+    max-height: 750px;
+}
+
+
+/* ================ TECNOLOGIAS  ================ */
+
+.cards {
+    display: flex;
+    justify-content: space-around; /*ele pega a "sobra" de espaço que ficou no canto e distribui entre os cards*/
+    flex-wrap: wrap; /*quando reduzir a tela ele quebra a linha */
+    width: 100%;
+
+}
+
+.card-wrap {
+    margin: 1.7rem 0.8rem;
+
+}
+
+.card {
+    width: 100%;
+    max-width: 390px;
+    min-height: 520px;
+    background-color: var(--light3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    overflow: hidden;
+}
+
+.icone {
+    width: 90px;  
+    margin-bottom: 1.7rem;  
+}
+
+.card .titulo-pequeno {
+    line-height: 0.8;
+}
+
+.card .texto {
+    font-size: 1.15rem;
+    margin: 1.8rem 0;
+}
+
+
+
+
+/* ================ PORTFOLIO  ================ */
+
+.portfolio {
+    position: relative;
+    width: 100%;
+    background-color: var(--light2);
+    
+}
+
+.background-bg {
+    position: absolute;
+    width: 100%;
+    height: 520px;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+}
+
+.portfolio .titulo, .portfolio .titulo:before {
+    color: var(--light);
+
+}
+
+.portfolio .titulo:after {
+    background-color: var(--light);
+}
+
+.filtro {
+    width: 100%;
+    display: flex; /*fica tudo em linha*/
+    align-items: center;
+    justify-content: center;
+}
+
+.filtro-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0.45rem 0.4rem;
+    padding: 0.85rem 1.8rem;
+    color: var(--light);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: 0.3s;
+}
+
+.filtro-btn.active {
+    background-color: var(--light);
+    color: var(--main-color );
+}
+
+.grid {
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.grid-item {
+    width: 33.33%;
+    padding: 1rem 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    height: 330px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.gallery-image img {
+    position: absolute;
+    height: 115%;
+    width: initial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    transition: 0.5s;
+
+   
+}
+
+.gallery-image .img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    color: var(--light);
+    background-color: rgba(4, 12, 159, 0.55);
+    display: flex;
+    flex-direction: column; /*display flex deixa tudo na mesma linha, alterando o flex direction ele deixa tudo na horizontal*/
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem 3.2rem;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.img-overlay .plus {
+    position: relative;
+    margin: auto 0;
+}
+
+.plus:before, .plus:after {
+    content: '';
+    position: absolute;
+    width: 4.5rem;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--light);
+    border-radius: 3px;
+}
+
+.plus:before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+
+}
+
+.img-description {
+    width: 100%;
+}
+
+.img-overlay h3 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.img-overlay h5 {
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+.gallery-image:hover .img-overlay {
+    opacity: 1;
+}
+
+.gallery-image:hover img{
+    transform: translate(-50%, -50%) scale(1.1); 
+}
+
+.ver-mais{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* ================ SOBRE MIM  ================ */
+
+.sobre {
+    overflow: hidden;
+
+}
+
+.sobre img {
+    max-width: 600px;
+}
+
+.sobre .texto {
+    margin-top: 1rem;
+}
+
+.skills {
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.skill {
+    margin: 1rem 0;
+}
+
+.skill-titulo{
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.skill-bar {
+    width: 70%;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #ece6fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-progress {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    transition: 1s;
+}
+
+.sobre .column-1 {
+    position: relative;
+}
+
+.sobre .column-1:before {
+  content: "Sobre";
+  position: absolute;
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--main-color);
+  opacity: 0.04;
+  top: 20px;
+  left: 0;
+  line-height: 0;
+}
+
+
+
+
+/* ================ DEPOIMENTOS  ================ */
+
+.depoimentos {
+    background-color: var(--light2);
+    overflow: hidden;
+
+}
+
+.depoimentos-content {
+    margin-top: 6rem;
+}
+
+.reviews {
+    overflow: hidden;
+}
+
+.review {
+    position: relative;
+    padding: 2rem 1.5rem;
+}
+
+.quote {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--main-color);
+    opacity: 0.04;
+    font-size: 8rem;
+}
+
+.rate {
+    display: flex;
+    font-size: 1.4rem;
+    color: #ebc000;
+    margin-bottom: 1.5rem;
+}
+
+.rate i {
+    margin-right: 0.3rem;
+}
+
+.review-texto {
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: #444;
+    line-height: 1.7;
+}
+
+.review-info {
+    margin-top: 2rem;
+}
+
+.review-nome {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.review-cargo {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: #777;
+}
+
+.review-nav {
+    bottom: 2.2rem;
+    top: initial;
+    font-size: 1.3rem;
+    color: var(--main-color);
+}
+
+
+.swiper-button-next {
+    right: 2rem;
+    left: initial;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.swiper-button-prev {
+    right: 2rem;
+    left: initial;
+    margin: 1rem;
+    display: inline-block;
+}
+
+.swiper-button-prev:after,
+ .swiper-button-next:after {
+    display: none;
+    
+}
+
+
+/* ================ CONTATO  ================ */
+
+.contato {
+    width: 100%;
+    padding: 13.5rem 0 8.5rem 0;
+    background-color: var(--main-color);
+}
+
+.contato-box {
+    width: 100%;
+    background-color: var(--light);
+    border-radius: 45px;
+    padding: 5.5rem 4.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*Vai dividir o grid em duas partes de 1*/
+     
+}
+
+.contato-info { /*parte da esquerda*/
+    padding-right: 2rem;
+}
+
+.contato-form { /*parte da direita*/
+    padding-left: 2rem;
+}
+
+.contato-info .titulo::after{
+    left: 0;
+    transform: initial;
+
+}
+
+.info-wrap {
+    margin-top: 2rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info:not(:last-child) {
+    margin-bottom: 1.3rem;
+}
+
+.contato-icone {
+    min-width: 67px;    
+    height: 67px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: var(--light);
+    text-align: center;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+
+}
+
+.contato-icone i {
+    line-height: 67px;
+
+}
+
+.info-texto {
+    font-size: 1.3rem;
+    display: inline-block;
+}
+
+.contato-form .titulo::after {
+    display: none;
+}
+
+.contato-form .titulo {
+    margin: 0;
+}
+
+.contato-form .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-column-gap: 0.6rem ;
+}
+
+.contato-input {
+    padding: 1.2rem;
+    margin: 0.6rem 0;
+    border: none;
+    outline: none;
+    background: #f3f3f3;
+    border-radius: 4rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+.contato-input::placeholder {
+    font-weight: 400;
+}
+
+.contato-input.textarea {
+    resize: none;
+    min-height: 280px;
+    border-radius: 2rem;
+}
+
+.contato-input:hover {
+    background: #ececec;
+
+}
+
+.contato-input:focus{
+    background: #eaeaea;
+}
+
+.contato-form .btn {
+    margin-top: 0.6rem;
+}
+
+
+
+/* ================ CONTRATE  ================ */
+
+.contrate {
+    padding: 12rem 0;
+
+}
+
+.contrate .container {
+    text-align: center;
+}
+
+.contrate .titulo {
+    margin-bottom: 1.3rem;
+
+}
+
+.contrate .texto {
+    max-width: 1000px;
+    margin: 0 auto 1.6rem auto;
+}
+
+
+/* ================ FOOTER  ================ */
+
+footer {
+    background-color: #222;
+    padding: 6rem 0;
+}
+
+.footer .grid-4{
+    display: grid;
+    grid-template-columns: 3.5fr 2fr 2fr 3fr; /*aqui especifico o tamanho de cada parte*/
+}
+
+.grid-4-col {
+    padding: 0 1.7rem; /* 0 para top e bottom e 1.7 para left e right*/
+}
+
+.footer .titulo-pequeno {
+    color: #fafafa;
+    margin-bottom: 0.5rem;
+}
+
+.footer .texto {
+    color: #aaa;
+}
+
+.footer-links a {
+    color: #888;
+    font-size: 1.25rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    transition: 0.3s;  
+}
+
+.footer-links a:hover {
+    color: var(--main-color);
+}
+
+.footer-input-wrap {
+    display: grid;
+    grid-template-columns: auto 50px;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 1.2rem;
+
+}
+
+.footer-input {
+    background-color: #424141;
+    color: #333;
+    outline: none;
+    border: none;
+    padding: 0 1.5rem;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.input-arrow {
+    color: #fff;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    transition: 0.3s;
+}
+
+.input-arrow:hover {
+    background-color: #fff;
+    color: var(--main-color);
+}
+
+.focus {
+    background-color: #fff;
+}
+
+.bottom-footer {
+    margin-top: 5.5rem;
+    padding: 0 1.7rem;
+    display:flex ;
+    align-items: center;
+    justify-content: space-between; /*espaço no meio deixando um em cada ponta*/
+}
+
+.copyright .texto {
+    color: #7b7b7b;
+    font-size: 1.2rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.copyright .texto span {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.followme-wrap {
+    display: flex;
+}
+
+.followme {
+    display: flex;
+    align-items: center;
+}
+
+.followme h3 {
+    color: #7b7b7b;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.followme .footer-line {
+    width: 60px;
+    height: 2px;
+    background-color: #7b7b7b;
+    margin: 0 1.2rem;
+    display: inline-block;
+}
+
+.social-media a {
+    color: #7b7b7b;
+    font-size: 1.3rem;
+    margin-right: 0.4rem;
+    transition: 0.3s;
+}
+
+.social-media a:hover {
+    color: var(--main-color);
+}
+
+.back-btn-wrap {
+    position: relative;
+    margin-left: 2.5rem;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 55px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 0 20px 1px (rgba(0, 0, 0, 0.15));
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+
+}
+
+.back-btn:hover {
+    background-color: #fff;  
+    color: var(--main-color);
+}
+
+.back-btn-wrap:before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    border-radius: 50%;
+    opacity: 0.08;
+}
+
+
+/* ================ RESPONSIVO ================ */
+
+@media (max-width: 1280px) {
+    .texto {
+        font-size: 1rem;
+    }
+    .titulo {
+        font-size: 2.1rem;
+        padding-bottom: 0.65rem;
+    }
+    
+    .titulo:before {
+        margin-bottom: 0.2rem;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .titulo:after {
+        height: 3.5px;
+        width: 70px;
+    }
+
+    .titulo-pequeno {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.7rem;
+        font-size: 0.8rem;
+
+    }
+
+    .btn.pequeno {
+        padding: 0.65 1.6rem;
+        font-size: 0.7rem;
+    }
+
+    .section-header .texto {
+        max-width: 500px;
+    }
+
+    .section {
+        padding: 4.5rem 0;
+    }
+
+    .column-1 {
+        margin-right: 1rem;
+        
+    }
+    
+    .column-2 {
+        margin-left: 1rem;
+    }
+
+    .header-content .imagem .img-element {
+        max-width: 500px;
+    }
+    
+    nav .container {
+        height: 4.5rem;
+
+    }
+
+    .header-content .container.grid-2 {
+        min-height: calc(100vh - 4.5rem);
+        padding-bottom: 1.5rem;
+    }
+
+    .logo {
+        width: 65px;
+    }
+
+    .links a {
+        font-size: 0.8rem;
+        padding: 0.65rem 0.7rem;
+    }
+
+    .links a.active {
+        font-size: 0.7rem;
+        padding: 0.7rem 1.7rem;
+        margin-left: 0.6rem;
+    }
+
+    .header-nome {
+        font-size: 2.6rem;
+    }
+
+    .header-content .texto {
+        margin: 1.1rem 0;
+    }
+
+    .card {
+        min-height: 390px;
+        max-width: 290px;
+        padding: 2.2rem 1.5rem;
+    }
+
+    .icone {
+        width: 65px;
+        margin-bottom: 0.8rem;
+    }
+
+    .card .texto {
+        font-size: 0.9rem;
+        margin: 1rem 0;
+    }
+
+    .card:before {
+        font-size: 5rem;
+
+    }
+
+    .card-wrap {
+        margin: 1rem 0.6rem;
+    }
+
+    .grid {
+        margin: 0.8rem 0;
+    }
+
+    .grid-item {
+        padding: 0.8rem;
+    }
+
+    .gallery-image {
+        height: 250px;
+        max-width: 325px;
+    }
+
+    .gallery-image .img-overlay {
+        padding: 1.4rem 2rem;
+    }
+
+    .plus:before,
+    .plus:after {
+        width: 2.8rem;
+    }
+
+    .img-overlay h3 {
+        font-size: 1.1rem;
+    }
+    
+    .img-overlay h5 {
+        font-size: 0.8rem;
+    }
+
+    .background-bg {
+        height: 350px;
+    }
+
+    .filtro-btn {
+        padding: 0.6rem 1.45rem;
+        font-size: 0.7rem;
+    }
+
+    .sobre img {
+        max-width: 420px;
+    }
+
+    .sobre .texto {
+        margin-top: 0.7rem;
+    }
+
+    .skills {
+        margin: 0.9rem 0 1.7rem 0;
+    }
+
+    .skill-titulo {
+        font-size: 1rem;
+    }
+
+    .skill-bar {
+        height: 6px;
+
+    }
+
+    .sobre .column-1:before {
+        font-size: 6rem;
+        top: 13px;
+    }
+
+    .rate {
+        font-size: 1.15rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .review-texto {
+        font-size: 1rem;
+    }
+
+    .review-info {
+        margin-top: 1.1rem;
+    }
+
+    .review-nome {
+        font-size: 1.05rem;
+    }
+
+    .review-cargo {
+        font-size: 0.85rem;
+    }
+
+    .quote {
+        font-size: 6rem;
+    }
+
+    .review-nav {
+        font-size: 1.55rem;
+    }
+
+    .swiper-button-next {
+        right: 2.5rem;   
+    }
+
+    .swiper-button-prev {
+        right: 4.5rem;
+    }
+
+    .contato {
+        padding: 9rem 0 6rem 0;
+    }
+
+    .contato-form {
+        padding-left: 1rem;
+    }
+    
+    .contato-info {
+        padding-right: 1rem;
+    }
+
+    .contato-box {
+        padding: 3.6rem 3rem;
+    }
+
+    .info-wrap {
+        margin-top: 1.2rem;
+    }
+
+    .contato-icone {
+        min-width: 50px;
+        height: 50px;
+        font-size: 1rem;
+        margin-right: 0.8rem;
+    }
+
+    .contato-icone i {
+        line-height: 50px;
+    }
+
+    .info-texto {
+        font-size: 1.05rem;
+    }
+
+    .contato-input {
+        font-size: 0.9rem;
+        padding: 0.9rem 1.6rem;
+        margin: 0.4rem 0;
+    }
+    
+    .contrate {
+        padding: 8rem;
+    }
+
+    .footer {
+        padding: 4rem 0;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+    }
+
+    .footer .titulo-pequeno {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-input-wrap {
+        height: 36px;
+        margin-top: 0.8rem;
+    }
+    
+    .footer-input {
+        font-size: 0.9rem;
+        padding: 0 1.2rem;
+    }
+
+    .input-arrow {
+        font-size: 1rem;
+    }
+    
+    .copyright .texto {
+        font-size: 0.9rem;
+    }
+
+    .followme h3 {
+        font-size: 1rem;
+    }
+
+    .followme .footer-line {
+        margin: 0 0.8rem;
+    }
+
+    .social-media a {
+        font-size: 1rem;
+    }
+
+    .back-btn-wrap {
+        margin-left: 1.3rem;
+
+    }
+
+    .back-btn {
+        width: 43px;
+        height: 43px;
+        font-size: 0.9rem;
+    }
+
+    .back-btn-wrap:before {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* ================ RESPONSIVO 850PX  ================ */
+@media (max-width: 850px) {
+    .grid-2 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .column-1 {
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+    
+    .column-2 {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .hamburguer-menu {
+        display: flex;
+    }
+
+    .header-content {
+        margin-top: 1rem;
+    }
+
+    .header-nome {
+        font-size: 2.3rem;
+    }
+
+    .header-content .imagem {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    header .column-1 {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    .links {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background-color: #252525;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: translateX(100%);
+        transition: 0.5s;
+    }
+
+    .links ul {
+        flex-direction: column;
+    }
+
+    .links a {
+        color: var(--light);
+    }
+
+    .links a.active {
+        margin-left: 0;
+        margin: 0.5rem 0;
+    }
+
+   .header-content .container.grid-2 {
+        min-height: 80vh;
+    }
+
+    .grid-item {
+        width: 50%;
+    }
+
+    .gallery-image {
+        height: 210px;
+        max-width: 270px;
+    }
+
+    .background-bg {
+        height: 340px;
+    }
+
+    .skill-bar {
+        width: 100%;
+    }
+
+    .sobre .column-1:before {
+        font-size: 5rem;
+    }
+
+    .depoimentos-content {
+        margin-top: 1.7rem;
+
+    }
+
+    .depoimentos-content .imagem {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .review-nav {
+        bottom: 3rem;
+    }
+
+    .contato-box {
+        grid-template-columns: 1fr;
+        padding: 3.2rem 2.7rem;
+    }
+
+    .contato-info {
+        padding-right: 0;
+        padding-bottom: 0.5rem;
+    }
+
+    .contato-form {
+        padding-right: 0;
+        padding-top: 0.5rem;
+    }
+
+    .info-wrap {
+        margin-top: 0.7rem;
+    }
+
+    .info:not(:last-child) {
+        margin-bottom: 0.8rem;
+    }
+
+    .contato-input.textarea {
+        min-height: 220px;
+    }
+
+    .contato:before {
+        height: 25%;
+    }
+    
+    .contato:after {
+        height: 75%;
+        top: 25%;
+    }
+
+    .footer .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .footer-sobre {
+        grid-column: 1 / 3;
+    }
+
+    .footer-contato {
+        grid-column: 1 / 3;
+    }
+
+    .grid-4-col {
+        margin: 1rem 0;
+        padding: 0;
+    }
+
+    .footer-input-wrap {
+        max-width: 300px;
+        margin: 0.95rem auto 0 auto;
+        grid-template-columns: auto 45px;
+    }
+
+    .bottom-footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 0 0 0;
+        margin-top: 2.5rem;
+        position: relative;
+
+    }
+
+    .bottom-footer:before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        max-width: 500px;
+        height: 1px;
+        background-color: #7b7b7b;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+ 
+    .followme-wrap {
+        margin-top: 0.8rem;
+    }
+
+}
+
+
+/* ================ RESPONSIVO 600PX  ================ */
+
+@media (max-width: 600px) {
+    .grid-item {
+        width: 100%;
+    }
+}
+
+/* ================ RESPONSIVO 560PX  ================ */
+@media (max-width: 560px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    .texto {
+        font-size: 0.90rem;
+    }
+
+    .depoimentos-content {
+        margin-top: 1rem;
+    }
+
+    .review {
+        padding: 1.5rem 1rem;
+    }
+
+    .review-texto {
+        font-size: 0.9rem;
+    }
+
+    .review-nav {
+        bottom: 1.5rem;
+        font-size: 1.3rem;
+
+    }
+
+    .swiper-button-next {
+        right: 1.3rem;
+        
+    }
+
+    .swiper-button-prev {
+        right: 3rem;
+    }
+
+    .contato {
+        padding: 8rem 0 5rem 0;
+    }
+
+    .contato-info {
+        display: none;
+    }
+
+    .contato-box {
+        padding: 2.3rem 2rem;
+        border-radius: 30px;
+    }
+
+    .contato:before {
+        background-size: 2005;
+    }
+
+    .contato-form .row {
+        grid-column-gap: 0.3rem;
+    }
+
+    .contato-input {
+        font-size: 0.8rem;
+        padding: 0.8rem 1.4rem;
+        margin: 0.25rem 0;
+    }
+
+    
+
+
+}
