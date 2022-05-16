@@ -435,18 +435,23 @@
 
                         <div class="contato-form">
                             <h3 class="titulo">Entre em contato</h3>
-                            <div class="row">
-                                <input type="text" class="contato-input" placeholder="Telefone">
-                                <input type="text" class="contato-input" placeholder="Email">
-                            </div>
-                            <div class="row">
-                                <input type="text" class="contato-input" placeholder="Nome">
-                                <input type="email" class="contato-input" placeholder="Empresa">
-                            </div>
-                            <div class="row">
-                                <textarea name="mensagem" class="contato-input textarea" placeholder="Mensagem"></textarea>
-                            </div>
-                            <a href="#" class="btn">Enviar</a>
+                            <form action="https://formsubmit.co/guijaeger@gmail.com" method="POST">
+                                <input type="hidden" name="_next" value="https://www.pedrojaeger.com.br/">
+                                <input type="hidden" name="_captcha" value="false">
+
+                                <div class="row">
+                                    <input type="text" name="name" class="contato-input" placeholder="Nome">
+                                    <input type="text" name="subject" class="contato-input" placeholder="Empresa">
+                                </div>
+                                <div class="row">
+                                    <input type="text" name="phone" class="contato-input" placeholder="Telefone">
+                                    <input type="e" name="email" class="contato-input" placeholder="Email">
+                                </div>
+                                <div class="row">
+                                    <textarea name="mensagem" class="contato-input textarea" placeholder="Mensagem"></textarea>
+                                </div>
+                                <button type="submit" class="btn">Enviar</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -530,7 +535,7 @@
                         <p class="texto">Vamos marcar uma entrevista? Ou quer mandar um feedback? Deixe seu email</p>
                         <div class="footer-input-wrap">
                             <input type="email" class="footer-input" placeholder="email">
-                            <a href="" class="input-arrow">
+                            <a href="#contato" class="input-arrow">
                                 <i class="fas fa-angle-right"></i>
                             </a>
                         </div>
